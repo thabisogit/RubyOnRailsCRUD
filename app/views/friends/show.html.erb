@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @friend.first_name + ' '+ @friend.last_name %>
+</p>
+
+<!-- <p>
+  <strong>Last name:</strong>
+  <%=  %>
+</p> -->
+
+<p>
+  <strong>Contact Details:</strong>
+  <a href = "mailto:<%= @friend.email%>">
+<%= @friend.email%>
+</a> | <%= @friend.phone + ' | '+ 'Twitter: '+ @friend.twitter%>
+  
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-secondary"  %> 
+<%= link_to 'Back', friends_path, class:"btn btn-dark" %>
